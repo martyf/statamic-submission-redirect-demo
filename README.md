@@ -165,13 +165,15 @@ public function buildRedirectUrl(): void
 }
 ```
 
-When building your redirect, simply set `$this->redirect` to be your target:
+The jist is: when building your redirect, simply set `$this->redirect` to be your target:
 
 ```php
 $this->redirect = 'https://statamic.com'
 ```
 
 The value of `$this->redirect` will be returned by the Submission's `getRedirectUrl` method.
+
+By default it is null (meaning no redirect).
 
 ### Bind your Submission
 
