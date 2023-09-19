@@ -3,7 +3,7 @@
 # Submission Redirect PR demo
 
 This demo site is to show how to use a Submission redirect in Statamic
-for [this pull request](https://github.com/martyf/cms/tree/feature/form-submission-redirects).
+for [this pull request](https://github.com/statamic/cms/pull/8729).
 
 ## What it does
 
