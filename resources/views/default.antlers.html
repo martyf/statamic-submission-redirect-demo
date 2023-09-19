@@ -1,0 +1,70 @@
+
+<div class="grid grid-cols-2 space-x-10">
+    <div>
+        <h2 class="text-2xl font-bold mb-6">AJAX form</h2>
+
+        {{ form:test class="ajax-form" }}
+
+        <div>
+            {{ fields }}
+            <div>
+                <label class="text-sm font-bold">{{ display }}</label>
+                <div>{{ field }}</div>
+                {{ if error }}
+                <p class="text-gray-500">{{ error }}</p>
+                {{ /if }}
+            </div>
+            {{ /fields }}
+        </div>
+
+        <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}">
+
+        <div class="mt-4">
+            <button class="bg-blue-500 text-white px-4 py-2" type="submit">Submit</button>
+        </div>
+
+        {{ /form:test }}
+
+    </div>
+
+    <div>
+        <h2 class="text-2xl font-bold mb-6">POST form</h2>
+
+        {{ form:test }}
+
+        {{ if success }}
+        <div class="bg-green-300 text-white p-2">
+            {{ success }}
+        </div>
+        {{ else }}
+        {{ if errors }}
+        <div class="bg-red-300 text-white p-2">
+            {{ errors }}
+            {{ value }}<br>
+            {{ /errors }}
+        </div>
+        {{ /if }}
+
+        <div>
+            {{ fields }}
+            <div>
+                <label class="text-sm font-bold">{{ display }}</label>
+                <div>{{ field }}</div>
+                {{ if error }}
+                <p class="text-gray-500">{{ error }}</p>
+                {{ /if }}
+            </div>
+            {{ /fields }}
+        </div>
+
+        <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}">
+
+        <div class="mt-4">
+        <button class="bg-blue-500 text-white px-4 py-2" type="submit">Submit</button>
+        </div>
+        {{ /if }}
+
+        {{ /form:test }}
+
+    </div>
+</div>
